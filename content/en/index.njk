@@ -1,0 +1,15 @@
+---js
+const numberOfLatestPostsToShow = 3;
+const lang = "en";
+const permalink = "/en/";
+---
+<h1>Latest {{ numberOfLatestPostsToShow }} Posts (English)</h1>
+
+{% set postslist = collections.posts_en | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = collections.posts_en | length %}
+{% include "postslist.njk" %}
+
+{% set morePosts = (collections.posts_en | length) - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/en/blog/">the blog archive</a>.</p>
+{% endif %}

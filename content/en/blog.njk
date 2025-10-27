@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+title: Blog Archive (English)
+lang: en
+permalink: /en/blog/
+---
+
+{% set postslist = collections.posts_en %}
+{% set postslistCounter = collections.posts_en | length %}
+{% include "postslist.njk" %}

@@ -1,0 +1,50 @@
+export default {
+	en: {
+		title: "My Blog",
+		description: "A multi-language blog about technology, travel, and life",
+		home: "Home",
+		blog: "Blog",
+		about: "About",
+		archive: "Archive",
+		tags: "Tags",
+		language: "Language",
+		readMore: "Read more",
+		posts: "Posts",
+		latestPosts: "Latest Posts",
+		allPosts: "All Posts",
+		tagged: "Tagged",
+		postsTagged: "posts tagged"
+	},
+	se: {
+		title: "Min Blogg",
+		description: "En flerspråkig blogg om teknologi, resor och livet",
+		home: "Hem",
+		blog: "Blogg",
+		about: "Om",
+		archive: "Arkiv",
+		tags: "Taggar",
+		language: "Språk",
+		readMore: "Läs mer",
+		posts: "Inlägg",
+		latestPosts: "Senaste Inlägg",
+		allPosts: "Alla Inlägg",
+		tagged: "Taggat",
+		postsTagged: "inlägg taggade"
+	},
+	ro: {
+		title: "Blogul Meu",
+		description: "Un blog multilingv despre tehnologie, călătorii și viață",
+		home: "Acasă",
+		blog: "Blog",
+		about: "Despre",
+		archive: "Arhivă",
+		tags: "Etichete",
+		language: "Limbă",
+		readMore: "Citește mai mult",
+		posts: "Articole",
+		latestPosts: "Articole Recente",
+		allPosts: "Toate Articolele",
+		tagged: "Etichetat",
+		postsTagged: "articole etichetate"
+	}
+};

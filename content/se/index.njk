@@ -1,0 +1,15 @@
+---js
+const numberOfLatestPostsToShow = 3;
+const lang = "se";
+const permalink = "/se/";
+---
+<h1>Senaste {{ numberOfLatestPostsToShow }} Inlägg (Svenska)</h1>
+
+{% set postslist = collections.posts_se | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = collections.posts_se | length %}
+{% include "postslist.njk" %}
+
+{% set morePosts = (collections.posts_se | length) - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>{{ morePosts }} fler inlägg finns i <a href="/se/blog/">bloggarkivet</a>.</p>
+{% endif %}

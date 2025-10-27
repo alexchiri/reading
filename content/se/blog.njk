@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+title: Bloggarkiv (Svenska)
+lang: se
+permalink: /se/blog/
+---
+
+{% set postslist = collections.posts_se %}
+{% set postslistCounter = collections.posts_se | length %}
+{% include "postslist.njk" %}

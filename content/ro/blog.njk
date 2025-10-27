@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+title: Arhiva Blogului (Română)
+lang: ro
+permalink: /ro/blog/
+---
+
+{% set postslist = collections.posts_ro %}
+{% set postslistCounter = collections.posts_ro | length %}
+{% include "postslist.njk" %}

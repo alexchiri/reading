@@ -1,0 +1,37 @@
+---
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Multi-Language Blog</title>
+	<script>
+		// Redirect to preferred language on load
+		(function() {
+			const LANG_KEY = 'preferredLanguage';
+			let preferredLang = 'en';
+
+			try {
+				preferredLang = localStorage.getItem(LANG_KEY) || 'en';
+			} catch (e) {
+				// localStorage not available
+			}
+
+			// Redirect to language-specific home
+			window.location.href = '/' + preferredLang + '/';
+		})();
+	</script>
+</head>
+<body>
+	<p>Redirecting to your preferred language...</p>
+	<p>
+		<a href="/en/">English</a> |
+		<a href="/se/">Svenska</a> |
+		<a href="/ro/">Română</a>
+	</p>
+</body>
+</html>

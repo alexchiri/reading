@@ -1,0 +1,15 @@
+---js
+const numberOfLatestPostsToShow = 3;
+const lang = "ro";
+const permalink = "/ro/";
+---
+<h1>Ultimele {{ numberOfLatestPostsToShow }} Articole (Română)</h1>
+
+{% set postslist = collections.posts_ro | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = collections.posts_ro | length %}
+{% include "postslist.njk" %}
+
+{% set morePosts = (collections.posts_ro | length) - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>{{ morePosts }} articole suplimentare pot fi găsite în <a href="/ro/blog/">arhiva blogului</a>.</p>
+{% endif %}
