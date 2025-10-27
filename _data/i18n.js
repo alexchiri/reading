@@ -1,7 +1,7 @@
 export default {
 	en: {
-		title: "My Blog",
-		description: "A multi-language blog about technology, travel, and life",
+		title: "Alex reads",
+		description: "Thoughts, ideas about what I am reading in three (3) languages.",
 		home: "Home",
 		blog: "Blog",
 		about: "About",
@@ -16,8 +16,8 @@ export default {
 		postsTagged: "posts tagged"
 	},
 	se: {
-		title: "Min Blogg",
-		description: "En flerspråkig blogg om teknologi, resor och livet",
+		title: "Alex läser",
+		description: "Tankar, idéer om vad jag läser på tre (3) språk.",
 		home: "Hem",
 		blog: "Blogg",
 		about: "Om",
@@ -32,8 +32,8 @@ export default {
 		postsTagged: "inlägg taggade"
 	},
 	ro: {
-		title: "Blogul Meu",
-		description: "Un blog multilingv despre tehnologie, călătorii și viață",
+		title: "Alex citește",
+		description: "Ganduri, idei despre ceea ce citesc in trei (3) limbi",
 		home: "Acasă",
 		blog: "Blog",
 		about: "Despre",

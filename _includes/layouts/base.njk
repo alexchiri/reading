@@ -43,12 +43,12 @@
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link" id="home-link">{{ metadata.title }}</a>
+			{%- set currentLang = lang or "en" %}
+			<a href="/" class="home-link" id="home-link">{{ i18n[currentLang].title }}</a>
 
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
-				{%- set currentLang = lang or "en" %}
 				<li class="nav-item"><a href="/{{ currentLang }}/"{% if page.url == "/" + currentLang + "/" %} aria-current="page"{% endif %}>{{ i18n[currentLang].home }}</a></li>
 				<li class="nav-item"><a href="/{{ currentLang }}/about/"{% if page.url == "/" + currentLang + "/about/" %} aria-current="page"{% endif %}>{{ i18n[currentLang].about }}</a></li>
 				<li class="nav-item language-switcher">
