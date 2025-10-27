@@ -45,18 +45,17 @@
 		<header>
 			<a href="/" class="home-link" id="home-link">{{ metadata.title }}</a>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
+				{%- set currentLang = lang or "en" %}
+				<li class="nav-item"><a href="/{{ currentLang }}/"{% if page.url == "/" + currentLang + "/" %} aria-current="page"{% endif %}>{{ i18n[currentLang].home }}</a></li>
+				<li class="nav-item"><a href="/{{ currentLang }}/about/"{% if page.url == "/" + currentLang + "/about/" %} aria-current="page"{% endif %}>{{ i18n[currentLang].about }}</a></li>
 				<li class="nav-item language-switcher">
 					<span>🌐</span>
-					<a href="#" data-lang="en" class="lang-switch{% if lang == 'en' %} active{% endif %}">EN</a> |
-					<a href="#" data-lang="se" class="lang-switch{% if lang == 'se' %} active{% endif %}">SE</a> |
-					<a href="#" data-lang="ro" class="lang-switch{% if lang == 'ro' %} active{% endif %}">RO</a>
+					<a href="#" data-lang="en" class="lang-switch{% if currentLang == 'en' %} active{% endif %}">EN</a> |
+					<a href="#" data-lang="se" class="lang-switch{% if currentLang == 'se' %} active{% endif %}">SE</a> |
+					<a href="#" data-lang="ro" class="lang-switch{% if currentLang == 'ro' %} active{% endif %}">RO</a>
 				</li>
 				</ul>
 			</nav>

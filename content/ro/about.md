@@ -1,8 +1,5 @@
 ---
 layout: layouts/base.njk
-eleventyNavigation:
-  key: Despre
-  order: 2
 title: Despre Mine
 lang: ro
 permalink: /ro/about/

@@ -1,8 +1,5 @@
 ---
 layout: layouts/base.njk
-eleventyNavigation:
-  key: Om
-  order: 2
 title: Om Mig
 lang: se
 permalink: /se/about/
